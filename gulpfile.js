@@ -214,6 +214,18 @@ function createWebpackConfig(
   // for now we translate these regardless of the `SKIP_BABEL` value (with the
   // exception of `MOZCENTRAL`/`TESTING`-builds where this isn't an issue).
   const babelPlugins = [
+    [
+      "@babel/plugin-proposal-nullish-coalescing-operator",
+      {
+        loose: true,
+      },
+    ],
+    [
+      "@babel/plugin-proposal-optional-chaining",
+      {
+        loose: true,
+      },
+    ],
     "@babel/plugin-transform-modules-commonjs",
     [
       "@babel/plugin-transform-runtime",
